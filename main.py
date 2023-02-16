@@ -67,12 +67,12 @@ async def echo_send(message : types.Message):
 	elif message.text == "Чебурашка запусти игру":
 		await message.answer("✨✨✨✨ NEON BLASTER 2 ✨✨✨✨",reply_markup=urlne)#??????????
 
-	#if not database.examination(message.from_user.id):
-	#	database.add(message.from_user.id)
-	#if not database.mute(message.from_user.id):
-	#	pass
-	#else:
-	#	await message.delete()
+	if not database.examination(message.from_user.id):
+		database.add(message.from_user.id)
+	if not database.mute(message.from_user.id):
+		pass
+	else:
+		await message.delete()
 
 
 #РАБОТА БОТА=TRUE
