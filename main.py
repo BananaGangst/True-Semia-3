@@ -48,7 +48,7 @@ async def echo_send(message : types.Message):
 		database.add_mute(user_id=message.from_user.id, mute_time=600)
 		await message.reply(f"🤬 Маты запрещены 🤬 \n@{message.from_user.username} Замучен на 10 минут❗")
 		await message.delete()
-	elif message.text == "/tixo":
+	elif message.text == "/tixo" or message.text == "/tixo@TrueFamily_bot":
 		if message.from_user.id == ADMIN_ID1 or message.from_user.id == ADMIN_ID2 or message.from_user.id == ADMIN_ID3:
 			if not message.reply_to_message:
 				await message.answer("😖 Команда должна быть ответом на сообщение 😖")
