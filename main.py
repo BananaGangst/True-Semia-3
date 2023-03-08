@@ -5,7 +5,7 @@ import os, json, string
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
 from database import Database
-from config import API_TOKEN, ADMIN_ID1, ADMIN_ID2, ADMIN_ID3
+from config import API_TOKEN, ADMIN_ID1, ADMIN_ID2
 
 #ТОКЕН БОТА
 bot = Bot(token=API_TOKEN)
